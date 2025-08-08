@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title></title>
+    <script>
+        function submit() {
+            document.puzzle.submit();
+        }
+    </script>
+</head>
+
+<body onresize="window.puzzleApp.reloadPuzzle()">
+        <p>ログインにはパズル認証が必要です。<br>ピースを移動させてパズルを完成させてからOKボタンを押すと『ドラゴンボール レジェンズ』が開始されます。<br>※パズルが難しい場合、画面右下のリロードボタンでパズルを変更できます。</p>
+    <center>
+        <form action="login.php" method="post" name="puzzle">
+            <div>
+                <script src="https://puzzleauth.captchasolutionweb.com/puzzle/get_js/?k=PUZZLE_Tmn5VJj2LLoZFX7XkgPUrmKPmzrUJ9"></script>            </div>
+            <input type="hidden" name="u" value="%7B0%7D">
+            <input type="hidden" name="lang" value="ja">
+            <input type="button" value="OK" style="font-size:1.4em;width:100px;height:50px" onclick="this.disabled=true;submit()">
+        </form>
+    </center>
+
+</body></html>
